@@ -157,16 +157,16 @@ class LevelGeneration
                 possibleMoves.Add(moves[i]);
         }
 
-        //O(1)
+     
         if (possibleMoves.Count > 0)
             return possibleMoves[rand.Next(possibleMoves.Count)];
 
-        //O(w + r)
+ 
         return CheckWandererPossibleMoves(matrix, wanderer, createdPath);
 
     }
 
-    //O(1)
+
     private  Point GetWandererNextMove(List<List<int>> matrix, List<Point> createdPath, Point pointA)
     {
 
@@ -193,7 +193,6 @@ class LevelGeneration
     }
 
 
-    //O(1)
     private static Point CreateSeekerNextMove(List<int> distances, List<Point> moves, List<List<int>> matrix, List<Point> createdPath)
     {
         /*
@@ -224,7 +223,7 @@ class LevelGeneration
 
     }
 
-    //O(1)
+
     private static Point GetSeekerNextMove(List<List<int>> matrix,
                                  List<Point> createdPath,
                                  Point pointA,
